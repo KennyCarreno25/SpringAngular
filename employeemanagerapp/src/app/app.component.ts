@@ -18,8 +18,10 @@ export class AppComponent implements OnInit {
     this.getEmployees();
   }
 
+  
   public getEmployees(): void {
     this.employeeService.getEmployees().subscribe(
+      // @ts-ignore
       (response: Employee[]) => {
         this.employees = response;
       },
